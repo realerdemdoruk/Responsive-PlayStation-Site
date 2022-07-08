@@ -1,0 +1,212 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 8%;
+  padding-right: 8%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.container .navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.container .navbar .logo {
+  width: 50px;
+  cursor: pointer;
+  margin: 30px 0;
+}
+.container .navbar .logo:hover {
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -moz-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.container .navbar .menu-icon {
+  width: 25px;
+  cursor: pointer;
+  display: none;
+}
+.container .navbar nav {
+  flex: 1;
+  text-align: right;
+}
+.container .navbar nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
+}
+.container .navbar nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+.container .navbar nav ul li a:hover {
+  color: #ff5ea2;
+}
+.container .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+.container .row .col-1 {
+  flex-basis: 40%;
+  position: relative;
+  margin-left: 50px;
+}
+.container .row .col-1 h2 {
+  font-size: 54px;
+}
+.container .row .col-1 h3 {
+  font-size: 30px;
+  color: #707070;
+  font-weight: 100;
+  margin: 20px 0 10px;
+}
+.container .row .col-1 p {
+  font-size: 16px;
+  color: #b7b7b7;
+  font-weight: 100;
+}
+.container .row .col-1 h4 {
+  margin: 30px 0;
+  font-size: 20px;
+}
+.container .row .col-1 button {
+  width: 140px;
+  border: 0;
+  padding: 12px 10px;
+  outline: none;
+  color: #fff;
+  background: linear-gradient(to right, #fb5283, #ff3527);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: width 0.5s;
+}
+.container .row .col-1 button:hover {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .row .col-1 button:hover img {
+  display: block;
+}
+.container .row .col-1 button img {
+  width: 30px;
+  display: none;
+}
+.container .row .col-1::after {
+  content: "";
+  width: 10px;
+  height: 57%;
+  background: linear-gradient(#ff469f, #ff6062);
+  position: absolute;
+  left: -40px;
+  top: 8px;
+}
+.container .row .col-2 {
+  position: relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+.container .row .col-2 .controller {
+  width: 90%;
+}
+.container .row .col-2 .color-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(#ff54a2, #ff575a);
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 80%;
+  z-index: -1;
+  transform: translateX(150px);
+}
+.container .row .col-2 .add-btn {
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+}
+.container .row .col-2 .add-btn img {
+  width: 35px;
+  margin-bottom: 5px;
+}
+.container .social-links {
+  text-align: center;
+}
+.container .social-links i {
+  height: 13px;
+  margin: 20px;
+  cursor: pointer;
+}
+.container .social-links i:hover {
+  color: #ff54a2;
+}
+
+@media only screen and (max-width: 700px) {
+  .container .navbar #menuList {
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .container .navbar .menu-icon {
+    display: block;
+  }
+  .container .navbar nav ul {
+    width: 100%;
+    background: linear-gradient(#ff54a2, #ff575a);
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+  .container .navbar nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .container .navbar nav ul li a {
+    color: #fff;
+  }
+  .container .navbar nav ul li a:hover {
+    color: blueviolet;
+  }
+  .container .row {
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+  .container .row .col-2 {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+  .container .row .col-2 .controller {
+    width: 77%;
+  }
+  .container .row .col-2 .color-box {
+    transform: translateX(75px);
+  }
+  .container .row .col-1 {
+    flex-basis: 100%;
+  }
+  .container .row .col-1 h2 {
+    font-size: 35px;
+  }
+  .container .row .col-1 h3 {
+    font-size: 15px;
+  }
+}
